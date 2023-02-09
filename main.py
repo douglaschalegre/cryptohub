@@ -1,7 +1,10 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, APIRouter
 
 app = FastAPI()
+router = APIRouter()
 
-@app.router.get('/')
+@router.get('/')
 def hello_world():
   return 'Hello World!'
+
+app.include_router(prefix='/v1', router=router)
