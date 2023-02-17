@@ -5,3 +5,6 @@ class UserCreateInput(BaseModel):
 
 class DefaultOutput(BaseModel):
   message: str
+
+class AlternativeOutput(DefaultOutput):
+  detail: str
