@@ -6,5 +6,5 @@ class UserCreateInput(BaseModel):
 class DefaultOutput(BaseModel):
   message: str
 
-class AlternativeOutput(DefaultOutput):
+class ErrorOutput(DefaultOutput):
   detail: str
