@@ -13,4 +13,3 @@ async def user_create(user_input: UserCreateInput):
     return DefaultOutput(message='OK')
   except Exception as error:
     raise HTTPException(400, detai=str(error))
-  
