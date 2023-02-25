@@ -12,7 +12,7 @@ async def user_create(user_input: UserCreateInput):
     await UserService.create_user(name=user_input.name)
     return DefaultOutput(message='OK')
   except Exception as error:
-    raise HTTPException(400, detai=str(error))
+    raise HTTPException(400, detail=str(error))
 
 @user_router.delete('/delete/{user_id}', description='This route deletes a user', response_model=DefaultOutput, responses={400: {'model': ErrorOutput}})
 async def user_create(user_id: int):
@@ -20,4 +20,4 @@ async def user_create(user_id: int):
     await UserService.delete_user(user_id)
     return DefaultOutput(message='User deleted')
   except Exception as error:
-    raise HTTPException(400, detai=str(error))
+    raise HTTPException(400, detail=str(error))
