@@ -34,6 +34,6 @@ async def user_favorite_add(favorite_add: UserFavoriteAddInput):
 async def user_favorite_remove(user_id: int, symbol: str):
   try:
     await FavoriteService.remove_favorite(user_id=user_id, symbol=symbol)
-    return DefaultOutput(message='User deleted')
+    return DefaultOutput(message='Favorite removed')
   except Exception as error:
     raise HTTPException(400, detail=str(error))
