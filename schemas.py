@@ -29,3 +29,14 @@ class UserListOutput(BaseModel):
 
   class Config:
     orm_mode = True
+
+class DaySummaryOutput(BaseModel):
+  symbol: str
+  opening: float
+  closing: float
+  lowest: float
+  highest: float
+  volume: float
+  quantity: float
+  amount: float
+  avg_price: float
