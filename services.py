@@ -14,7 +14,7 @@ class UserService:
       await session.execute(delete(User).where(User.id==user_id))
       await session.commit()
 
-  async def list_user(name: str):
+  async def list_user():
     async with async_session() as session:
       result = await session.execute(select(User))
       return result.scalars().all()
