@@ -9,6 +9,7 @@ uvicorn = "*"
 sqlalchemy = "*"
 asyncpg = "*"
 aiohttp = "*"
+pyjwt = "*"
 
 [dev-packages]
 
